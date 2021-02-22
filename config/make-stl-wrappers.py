@@ -40,8 +40,7 @@ def main(outdir, compiler, template_file, header_list_file):
         path = header_path(header, compiler)
         with FileAvoidWrite(os.path.join(outdir, header)) as f:
             f.write(string.Template(template).substitute(HEADER=header,
-                                                         HEADER_PATH=path,
-                                                         NEW_HEADER_PATH=path_to_new))
+                                                         HEADER_PATH=path))
 
 
 if __name__ == '__main__':

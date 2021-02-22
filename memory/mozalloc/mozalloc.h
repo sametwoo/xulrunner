@@ -12,10 +12,13 @@
  * https://bugzilla.mozilla.org/show_bug.cgi?id=427099
  */
 
-#include <stdlib.h>
-#include <string.h>
 #if defined(__cplusplus)
 #  include <new>
+#  include <cstdlib>
+#  include <cstring>
+#else
+#  include <stdlib.h>
+#  include <string.h>
 #endif
 
 #if defined(__cplusplus)
