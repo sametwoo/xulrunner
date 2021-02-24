@@ -1,0 +1,7 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:1190: checking host system type
+configure:1211: checking target system type
+configure:1229: checking build system type
+configure:1307: checking for mawk

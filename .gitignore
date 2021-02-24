@@ -1,5 +1,6 @@
 # .gitignore - List of filenames git should ignore
 /stage
+obj*/
 
 # Filenames that should be ignored wherever they appear
 *~
