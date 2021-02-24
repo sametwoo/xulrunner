@@ -273,7 +273,7 @@ void CPUFillFromThreadInfo(MDRawContextAMD64 *out,
   my_memcpy(&out->flt_save.xmm_registers, &info.fpregs.xmm_space, 16 * 16);
 }
 
-void CPUFillFromUContext(MDRawContextAMD64 *out, const ucontext *uc,
+void CPUFillFromUContext(MDRawContextAMD64 *out, const ucontext_t *uc,
                          const struct _libc_fpstate* fpregs) {
   const greg_t* regs = uc->uc_mcontext.gregs;
 
@@ -1479,7 +1479,7 @@ class MinidumpWriter {
   const int fd_;  // File descriptor where the minidum should be written.
   const char* path_;  // Path to the file where the minidum should be written.
 
-  const struct ucontext* const ucontext_;  // also from the signal handler
+  const struct ucontext_t* const ucontext_;  // also from the signal handler
   const struct _libc_fpstate* const float_state_;  // ditto
   LinuxDumper* dumper_;
   MinidumpFileWriter minidump_writer_;
